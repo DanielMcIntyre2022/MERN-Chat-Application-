@@ -1,8 +1,21 @@
-
+import { Row, Col, Button } from 'react-bootstrap'; 
+import { LinkContainer } from 'react-router-bootstrap';
+import './StylePages/Home.css';
 
 function Home() {
   return (
-    <div>Home</div>
+    <Row>
+      <Col md={6} className="d-flex flex-direction-column align-items-center justify-content-center">
+        <div>
+          <h1>Chat with your friends!</h1>
+          <p>Chat App lets you connect with your friends around the world</p>
+          <LinkContainer to="/chat">
+            <Button variant="success">Get Started</Button>
+          </LinkContainer>
+        </div>
+      </Col>
+        <Col md={6} className="home-background-image"></Col>
+    </Row>
   )
 }
 
